@@ -6,7 +6,7 @@ import Sidebar from './Sidebar/Sidebar'
 
 
 const Layout = () => {
-
+console.log("layout")
   return (
     <>
       <main>
