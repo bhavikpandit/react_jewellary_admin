@@ -1,0 +1,19 @@
+.MainOrder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 43px;
+}
+
+@media screen and (max-width: 1200px) {
+    .MainOrder{
+        justify-content: flex-start;
+    }
+}
+  
+@media screen and (max-width: 768px)
+{
+    .MainOrder{
+        align-items: center;
+    }
+}
