@@ -4,7 +4,6 @@ import "./layout.css"
 import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
 
-
 const Layout = () => {
 console.log("layout")
   return (

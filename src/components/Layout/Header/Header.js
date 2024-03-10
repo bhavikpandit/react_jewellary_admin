@@ -34,12 +34,12 @@ const Header = ({ onClick }) => {
         <div className='main'>
             <div className="margin: 1.25rem;">
                 <h1 className="heading">
-                    world
+                    JEWELRY
                 </h1>
             </div>
             <div className="content">
                 <div className="logout">
-                    <button className='backgroundColor: #4c3e75;' onClick={Logout}>Logout</button>
+                    <button className= 'btn' onClick={Logout}>Logout</button>
                 </div>
             </div>
         </div>
