@@ -3,8 +3,6 @@ import './login.css'
 import React, { useState } from 'react'
 import { LoginUser } from '../../api/Api';
 import { useNavigate } from 'react-router-dom';
-import logo_jw from '../../imgs/logo_jw.jpg'
-
 
 const Login = () => {
 
@@ -19,7 +17,7 @@ const Login = () => {
                 console.log(res.data)
                 setUser(res.data)
                 localStorage.setItem('user', JSON.stringify(res?.data))
-                localStorage.setItem('user-token', JSON.stringify(res?.data?.token))
+                localStorage.setItem('user-token', JSON.stringify(res?.data?.user?.accessToken))
                 navigate("/")
             }).catch(error => {
                 console.log(error)
@@ -36,16 +34,16 @@ const Login = () => {
                         {/* user name */}
                         <div>
                             <Form.Item
-                                label="Username"
+                                label="Email"
                                 className="form-group"
-                                name="username"
+                                name="email"
                                 rules={[
-                                    { required: true, message: "Please Enter Your Username!" },
+                                    { required: true, message: "Please Enter Your Email!" },
                                 ]}
                             >
                                 <Input
                                     className='h-[40px]'
-                                    placeholder="username"
+                                    placeholder="email"
                                 // suffix={<UserOutlined className="iconDesing" />}
                                 />
                             </Form.Item>
@@ -62,11 +60,11 @@ const Login = () => {
                                         required: true,
                                         message: "Please Enter Your password!",
                                     },
-                                    {
-                                        pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$/,
-                                        message:
-                                            "Password must be 6-12 characters long, Contain at least one upper case, lower case and not contain white spaces",
-                                    },
+                                    // {
+                                    //     pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$/,
+                                    //     message:
+                                    //         "Password must be 6-12 characters long, Contain at least one upper case, lower case and not contain white spaces",
+                                    // },
                                 ]}
                             >
                                 <Input.Password

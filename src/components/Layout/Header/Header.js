@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import "./header.css"
+import { LogoutUser } from '../../../api/Api'
 
 const Header = ({ onClick }) => {
     const navigate = useNavigate()
@@ -21,29 +22,44 @@ const Header = ({ onClick }) => {
     };
 
     const Logout = () => {
-        localStorage.removeItem('user-token')
-        const updatedIsLoggedIn = getParseItems('user-token');
-        setIsLoggedIn(updatedIsLoggedIn);
-        navigate("/login")
+        const user = JSON.parse(localStorage.getItem('user'))
+        console.log("user ==>", user.user)
+        const payload = {
+            id: user?.user?._id
+        }
+        LogoutUser(payload).then(res => {
+            console.log("res.data", res.data)
+            localStorage.removeItem('user')
+            localStorage.removeItem('user-token')
+            const updatedIsLoggedIn = getParseItems('user-token');
+            console.log("updatedIsLoggedIn ==>", updatedIsLoggedIn)
+            setIsLoggedIn(updatedIsLoggedIn);
+            navigate("/login")
+
+        }).catch(error => {
+            console.log(error)
+        })
+
+
     }
     console.log(isLoggedIn)
 
     return (
         <div className="header">
-        {/* Show navigation links on mobile when isCollapsed is true */}
-        <div className='main'>
-            <div className="margin: 1.25rem;">
-                <h1 className="heading">
-                    JEWELRY
-                </h1>
-            </div>
-            <div className="content">
-                <div className="logout">
-                    <button className= 'btn' onClick={Logout}>Logout</button>
+            {/* Show navigation links on mobile when isCollapsed is true */}
+            <div className='main'>
+                <div className="margin: 1.25rem;">
+                    <h1 className="heading">
+                       Craftgallary
+                    </h1>
+                </div>
+                <div className="content">
+                    <div className="logout">
+                        <button className='btn' onClick={Logout}>Logout</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 

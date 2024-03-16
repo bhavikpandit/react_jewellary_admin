@@ -1,8 +1,8 @@
 import React from 'react'
-import './MainDash.css';
+import '../App.css';
 const MainDash = () => {
   return (
-    <div className='MainDash'>
+    <div className='AppBody'>
       <h1>Dashboard</h1>  
     </div>
 

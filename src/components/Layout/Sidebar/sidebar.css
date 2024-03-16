@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: relative;
-    padding-top: 2rem;
+    margin: 20px 0;
     transition:all 300ms ease;
 }
 
@@ -26,7 +26,6 @@
 }
 
 .menu{
-    margin-top: 4rem;
     display:flex;
     flex-direction: column;
     gap: 2rem;

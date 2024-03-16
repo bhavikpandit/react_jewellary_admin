@@ -26,14 +26,33 @@ export const SidebarData = [
     _tag: "CSidebarNavItem",
     name: "Users",
     to: "/users",
+    icon: UilUsersAlt,
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Orders",
+    to: "/orders",
+    icon: UilClipboardAlt,
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Products",
+    to: "/products",
     icon: UilClipboardAlt,
   },
   {
     _tag: "CSidebarNavItem",
     name: "Orders",
     to: "/orders",
-    icon: UilUsersAlt,
+    icon: UilClipboardAlt,
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Orders",
+    to: "/orders",
+    icon: UilClipboardAlt,
   }
+
 
 ]
 
