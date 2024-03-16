@@ -7,6 +7,7 @@ import Orders from './Order/Orders'
 import MainDash from './MainDash/MainDash'
 import Login from './login'
 import AuthGuard from '../components/Auth/Auth'
+import Products from './Products/Products'
 
 
 const Router = () => {
@@ -18,6 +19,8 @@ const Router = () => {
         <Route path='/orders' element={<Orders />} />
         {/* <Route path='/products/:productId' element={<ProductDetails />} /> */}
         <Route path='/users' element={<Users />} />
+        {/* <Route path='/users/:userId' element={<UserDetails />} /> */}
+        <Route path='/products' element={<Products />} />
         {/* <Route path='/users/:userId' element={<UserDetails />} /> */}
       </Route>
     </Routes>

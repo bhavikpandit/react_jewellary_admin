@@ -11,28 +11,7 @@ const Sidebar = () => {
   const [selected, setSelected] = useState(0);
   // const [expanded, setExpanded] = useState(true);
   const navigate = useNavigate()
-  const [isLoggedIn, setIsLoggedIn] = useState("")
 
-  const getParseItems = (key) => {
-      const parsed_value = localStorage.getItem(key);
-      if (
-          parsed_value !== null &&
-          parsed_value !== "" &&
-          parsed_value !== undefined
-      ) {
-          return parsed_value;
-      } else {
-          return null;
-      }
-  };
-
-  const Logout = () => {
-      localStorage.removeItem('user-token')
-      const updatedIsLoggedIn = getParseItems('user-token');
-      setIsLoggedIn(updatedIsLoggedIn);
-      navigate("/login")
-  }
-  console.log(isLoggedIn)
    return (
     <div className='Sidebar'>
       {/* Menu */}
@@ -54,9 +33,6 @@ const Sidebar = () => {
           </div>
         )
       })}
-      <div className='menuItem'>
-        <UilSignOutAlt onClick={Logout}/>
-      </div>
       </div>
     </div>
   )

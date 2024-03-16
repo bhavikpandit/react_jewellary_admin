@@ -5,16 +5,17 @@ import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
 
 const Layout = () => {
-console.log("layout")
+  console.log("layout")
   return (
     <>
       <main>
-      <Header />
+        <Header />
         <div className='AppGlass'>
-          <Sidebar />
-          <div className='AppContent'>
-            <Outlet />
-          </div>
+          <div className='main-content'>
+            <Sidebar />
+            <div className='AppContent'>
+              <Outlet />
+            </div></div>
         </div>
       </main >
 

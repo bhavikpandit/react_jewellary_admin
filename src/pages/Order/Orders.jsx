@@ -1,8 +1,8 @@
 import React from 'react'
-import './orders.css';
+import '../App.css';
 const Orders = () => {
   return (
-    <div className='MainOrder'>
+    <div className='AppBody'>
       <h1>Orders</h1>  
     </div>
 
