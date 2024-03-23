@@ -53,7 +53,7 @@ const AuthGuard = ({ children }) => {
       return null;
     }
   };
-  const isLoggedIn = getParseItems("user-token");
+  const isLoggedIn = getParseItems("admin-token");
   console.log(isLoggedIn)
 
 

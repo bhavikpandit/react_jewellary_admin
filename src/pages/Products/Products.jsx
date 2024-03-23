@@ -4,6 +4,9 @@ const Products = () => {
   return (
     <div className='AppBody'>
       <h1>Products</h1>  
+      <div className='tableBody'>
+        hello products
+      </div>
     </div>
 
   )

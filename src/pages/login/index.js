@@ -16,8 +16,8 @@ const Login = () => {
             .then(res => {
                 console.log(res.data)
                 setUser(res.data)
-                localStorage.setItem('user', JSON.stringify(res?.data))
-                localStorage.setItem('user-token', JSON.stringify(res?.data?.user?.accessToken))
+                localStorage.setItem('admin', JSON.stringify(res?.data))
+                localStorage.setItem('admin-token', JSON.stringify(res?.data?.admin?.accessToken))
                 navigate("/")
             }).catch(error => {
                 console.log(error)

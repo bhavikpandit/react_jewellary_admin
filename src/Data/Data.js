@@ -2,13 +2,9 @@ import {
     UilEstate,
     UilClipboardAlt,
     UilUsersAlt,
-    UilPackage,
-    UilChart,
+    UilStore,
     UilUsdSquare,
     UilMoneyWithdrawal,
-    
-    
-
 } from '@iconscout/react-unicons';
 import img1 from '../imgs/img1.png'
 import img2 from '../imgs/img2.png'
@@ -30,14 +26,14 @@ export const SidebarData = [
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Orders",
-    to: "/orders",
-    icon: UilClipboardAlt,
+    name: "Products",
+    to: "/products",
+    icon: UilStore,
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Products",
-    to: "/products",
+    name: "Orders",
+    to: "/orders",
     icon: UilClipboardAlt,
   },
   {
